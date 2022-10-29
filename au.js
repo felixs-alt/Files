@@ -167,7 +167,7 @@ class Client {
         if (this.authorized) return this.startBots2();
         amount > 200 ? amount = 200 : amount = amount;
         for (let i = 0; i < amount; i++) {
-            this.bots.push(new Bot(this.protocolKey, window.client.botID, `wss://${window.MC.getHost()}:443?party_id=${window.MC.getPartyToken()}`, false));
+            this.bots.push(new Bot(this.protocolKey, window.client.botID, `https://agar.io:443?party_id=${window.MC.getPartyToken()}`, false));
             this.botID++;
         }
         console.log(`[AgarUnlimited] Starting ${localStorage.getItem('botAmount')} bots!`);
